@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Favorite Places
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <h1 style="text-align: center;">My Location</h1>
+  <table class="table" border="5px solid #dddddd" width=100%>
+    <thead>
+        <tr>
+            <th scope="col">City</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="col"> {{MojeMisto.loca}} </th>
+            <th scope="col"> {{MojeMisto.time}} </th>
+            <th scope="col"> {{MojeMisto.date}} </th>
+        </tr>
+    </tbody>
+  </table>
+  
+
+
+  <h1>Favorite places</h1>
+  <div>
+    <table class="table table-striped" border="5px solid #dddddd" width=100%>
+      <thead>
+        <tr>
+            <th scope="col">City</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let mesto of locations; let i=index">
+             <th scope="col">{{mesto.loca}}</th>
+             <th scope="col">{{mesto.date}}</th>
+             <th scope="col">{{mesto.time}}</th>
+             <th scope="col">
+                <ion-button (click)="removeItem(i)">Delete</ion-button>
+             </th>
+             </tr>
+        
+      </tbody>
+    </table>
+  </div>
+</ion-content>

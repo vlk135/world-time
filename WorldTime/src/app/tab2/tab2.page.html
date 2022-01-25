@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Add place
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <table class="table table-striped" border="5px solid #dddddd" width=100%>
+      <thead>
+        <tr>
+            <th scope="col">Location</th>
+            <th scope="col">City</th>
+            <th scope="col">Add</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let Misto of Mista; let i=index">
+             <th scope="col">{{Misto.misto}}</th>
+             <th scope="col">{{Misto.Mesto}}</th>
+             <th scope="col">
+                <ion-button (click)="Add(i)">Add to favorite</ion-button>
+             </th>
+             </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  <app-explore-container name="Tab 2 page"></app-explore-container>
+</ion-content>
