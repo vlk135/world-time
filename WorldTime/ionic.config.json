@@ -1,0 +1,7 @@
+{
+  "name": "WorldTime",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
